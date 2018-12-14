@@ -1,32 +1,87 @@
-.App {
-  text-align: center;
+body{
+  background-color: #DDDDDD;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Aligner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.leaderboard {
+  margin-top: 150px;
+   max-width: 50%;
+   min-width: 380px;
+}
+
+.leaderboard .title {
+  background-color: #02284A;
+  color: #E4E4E4;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
+  padding: 14px 0 14px 3%;
+  font-size: 14px;
+  margin: 0;
+}
+
+.leaderboard .title div{
+  margin-left: auto;
+  margin-right: 94px;
+}
+
+.leaderboard ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leaderboard ul li {
+  background: white;
+  color: #333;
+  padding: 14px 0 14px 3%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+}
+.leaderboard ul li:nth-child(odd) { background: #F7F7F7; }
+
+.points {
+  margin-left: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.form-divide {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  line-height: 14px;
+  padding: 10px;
+  display: flex;
+  flex: 1;
+}
+
+button {
+  display: inline-block;
+  background: #19304B;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 14px;
 }
