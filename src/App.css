@@ -57,6 +57,11 @@ body{
 }
 .leaderboard ul li:nth-child(odd) { background: #F7F7F7; }
 
+.leaderboard ul li > div{
+  display: flex;
+  flex: 1;
+}
+
 .points {
   margin-left: auto;
 }

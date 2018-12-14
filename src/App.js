@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { ValidatorForm } from 'react-form-validator-core';
 
 import InputField from './InputField';
@@ -47,7 +47,9 @@ class App extends Component {
   };
 
   // sets up row for edit
-  handleEdit = id => {
+  handleEdit = (e, id) => {
+    e.preventDefault();
+
     const player = this.state.leaderboard.find(player => {
       return player.id === id;
     });
@@ -95,9 +97,11 @@ class App extends Component {
     if (leaderboard.length < 1) return <li>Leaderboard is empty</li>;
 
     return leaderboard.map((item, i) => (
-      <li key={`player-${i}`} onClick={() => this.handleEdit(item.id)}>
-        {`${item.lastName}, ${item.firstName}`}
-        <div className="points">{item.score}</div>
+      <li key={`player-${i}`}>
+        <div onClick={e => this.handleEdit(e, item.id)}>
+          {`${item.lastName}, ${item.firstName}`}
+          <div className="points">{item.score}</div>
+        </div>
         <button onClick={() => this.handleDelete(item.id)}>DELETE</button>
       </li>
     ));
