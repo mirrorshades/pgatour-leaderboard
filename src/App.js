@@ -145,8 +145,14 @@ class App extends Component {
                   type="text"
                   onChange={this.handleInputChange}
                   value={this.state.score}
-                  validators={['required', 'minNumber:0', 'maxNumber:100']}
-                  errorMessages={['required', 'only numbers 0 - 100', 'only numbers 0 - 100', 'only numbers 0 - 100']}
+                  validators={['required', 'minNumber:0', 'maxNumber:100', 'matchRegexp:^[0-9]+$']}
+                  errorMessages={[
+                    'required',
+                    'only numbers 0 - 100',
+                    'only numbers 0 - 100',
+                    'only numbers 0 - 100',
+                    'only numbers 0 - 100',
+                  ]}
                 />
                 <button style={{ margin: '0 0 0 5px' }} type="submit">
                   SAVE
